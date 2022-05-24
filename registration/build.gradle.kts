@@ -24,6 +24,11 @@ testing {
     }
 }
 
+val jar by tasks.getting(Jar::class) {
+    manifest {
+        attributes["Main-Class"] = "registration.App"
+    }
+}
 application {
     // Define the main class for the application.
     mainClass.set("registration.App")
