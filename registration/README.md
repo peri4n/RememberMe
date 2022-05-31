@@ -22,3 +22,15 @@ See all options for gradle
 
 ## Running in Docker
 To be filled
+
+## TODOs:
+* [ ] Create working Docker Image
+    * [ ] Choose Base Image
+    * [ ] Create Directory
+    * [ ] Build App
+    * [ ] Run App
+* [ ] Mount `build/` dir as a volume?
+* [ ] Discuss how to build, run, tag, exec, ... with Docker --> in README
+* [ ] Create Service in `docker-compose.yml`
+* [ ] Usage of ENV Variables for e.g. Port
+
