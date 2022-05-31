@@ -23,14 +23,30 @@ See all options for gradle
 ## Running in Docker
 To be filled
 
+Build and run the container:
+```sh
+docker build -t foo .
+docker -p 8080:8080 foo
+```
+
+To debug (also works for layers):
+```
+docker run -it SHAID /bin/bash
+```
+
 ## TODOs:
 * [ ] Create working Docker Image
-    * [ ] Choose Base Image
-    * [ ] Create Directory
-    * [ ] Build App
-    * [ ] Run App
+    * [x] Choose Base Image
+        * Alpine vs Slim vs Default
+        * OpenJDK vs AdoptOpenJDK
+    * [x] Create Directory
+    * [ ] Create seperate User
+    * [x] Build App
+        * Build Stage to keep the image small, creates JAR
+    * [x] Run App
+        * Execution Stage, only needs JRE Environment, executes JAR
 * [ ] Mount `build/` dir as a volume?
-* [ ] Discuss how to build, run, tag, exec, ... with Docker --> in README
-* [ ] Create Service in `docker-compose.yml`
-* [ ] Usage of ENV Variables for e.g. Port
+* [x] Discuss how to build, run, tag, exec, ... with Docker --> in README
+* [x] Create Service in `docker-compose.yml`
+* [?] Usage of ENV Variables for e.g. Port
 
